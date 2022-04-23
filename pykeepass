@@ -1,0 +1,13 @@
+#requirements
+#pip install pykeepass
+from pykeepass import PyKeePass
+kp = PyKeePass("C:/Users/Bill/OneDrive/Coding/gh-clone/firepower-scripts/firepower-scripts/test.kdbx", password='thisisapassword')
+#
+group = kp.find_groups(name='linux')
+#
+entry = kp.find_entries(username='bill', first=True)
+#
+print(entry)
+#
+entry.password
+print(entry.password)
